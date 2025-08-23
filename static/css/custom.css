@@ -1,0 +1,189 @@
+/* --- Diagnostic Interface Design System --- */
+/* Designed for "Reality Consultant"      */
+
+/* 1. FONT IMPORTS
+/* ----------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Roboto+Mono:wght@400&display=swap');
+
+/* 2. ROOT VARIABLES
+/* Central control for the design system.
+/* ----------------------------------------- */
+:root {
+    /* Color Palette */
+    --color-background: #121212;
+    --color-text-primary: #E0E0E0;
+    --color-accent: #00FFFF;
+    --color-border-subtle: rgba(255, 255, 255, 0.1);
+    --color-accent-glow: rgba(0, 255, 255, 0.05);
+
+    /* Typography */
+    --font-family-headings: 'Inter', sans-serif;
+    --font-family-body: 'Roboto Mono', monospace;
+    --font-weight-heading: 300; /* Lighter weight for elegance */
+}
+
+/* 3. BASE STYLES
+/* Applies the core design to the body.
+/* ----------------------------------------- */
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-family-body);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+/* 4. TYPOGRAPHY
+/* ----------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-headings);
+    font-weight: var(--font-weight-heading);
+    color: var(--color-text-primary);
+}
+
+p {
+    margin-bottom: 1.5em; /* Standard paragraph spacing */
+}
+
+/* 5. CORE UI ELEMENTS
+/* ----------------------------------------- */
+
+/* Links */
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: filter 0.2s ease-in-out;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    filter: brightness(1.2);
+}
+
+/* Blockquotes (Diagnostic Messages) */
+blockquote {
+    margin: 1.5em 0;
+    padding: 1em 1.5em;
+    background-color: var(--color-accent-glow);
+    border-left: 3px solid var(--color-accent);
+    border-radius: 0 4px 4px 0;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    border-radius: 4px;
+    color: var(--color-accent);
+    font-family: var(--font-family-body);
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+}
+
+/* Subtle Dividers */
+hr {
+    border: none;
+    border-top: 1px solid var(--color-border-subtle);
+    margin: 2em 0;
+}
+
+
+
+/* 6. SINGLE POST LAYOUT
+/* ----------------------------------------- */
+.post-container {
+    max-width: 800px;
+    margin: 4rem auto; /* Centers the container with space on top/bottom */
+    padding: 0 2rem;   /* Adds padding on smaller screens */
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding-bottom: 2rem;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    font-family: var(--font-family-body);
+    font-size: 0.9rem;
+    color: var(--color-text-primary);
+    opacity: 0.7;
+}
+
+/* 7. SITE HEADER
+/* ----------------------------------------- */
+.site-header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.header-content {
+    max-width: 1200px; /* Wider than post for nav */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-family: var(--font-family-headings);
+    font-weight: var(--font-weight-heading);
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    transition: color 0.2s ease-in-out;
+}
+
+.site-title:hover {
+    color: var(--color-accent);
+    filter: none; /* Override default link hover */
+}
+
+.site-nav a {
+    margin-left: 1.5rem;
+    font-family: var(--font-family-body);
+    font-size: 1rem;
+}
+
+/* 8. SITE FOOTER
+/* ----------------------------------------- */
+.site-footer {
+    padding: 2rem;
+    border-top: 1px solid var(--color-border-subtle);
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.copyright {
+    margin: 0 0 1rem 0;
+}
+
+.social-links a {
+    margin: 0 0.75rem;
+}
