@@ -1,0 +1,13 @@
+<article class="post-entry">
+    <a href="{{ .Permalink }}" class="post-link-wrapper">
+        <header class="post-header">
+            <h2 class="post-title">{{ .Title }}</h2>
+        </header>
+        <div class="post-summary">
+            <p>{{ .Description }}</p>
+        </div>
+    </a>
+    <footer class="post-meta">
+        <time datetime="{{ .Date.Format "2006-002" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    </footer>
+</article>
