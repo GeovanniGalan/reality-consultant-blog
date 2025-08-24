@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<html lang="{{ .Site.LanguageCode }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-
-    {{/* This pulls in the theme's necessary head content */}}
-    {{- partial "head.html" . -}}
-
-    {{/* This is where your custom.css gets loaded */}}
-    {{- partial "custom-head.html" . -}}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    
+    {{ partial "custom-head.html" . }}
 </head>
 <body>
-
-    {{/* This calls YOUR custom header from layouts/partials/header.html */}}
-    {{- partial "header.html" . -}}
-
-    <div class="site-content">
-        {{/* This is where the content from single.html, list.html, etc., will be injected */}}
-        {{- block "main" . }}{{- end }}
+    <div class="container">
+        <header class="site-header">
+            {{ partial "header.html" . }}
+        </header>
+        
+        <main class="site-content">
+            {{ block "main" . }}{{ end }}
+        </main>
+        
+        <footer class="site-footer">
+            {{ partial "footer.html" . }}
+        </footer>
     </div>
-
-    {{/* This calls YOUR custom footer from layouts/partials/footer.html */}}
-    {{- partial "footer.html" . -}}
-
+    
+    <script src="{{ "js/main.js" | absURL }}"></script>
 </body>
 </html>

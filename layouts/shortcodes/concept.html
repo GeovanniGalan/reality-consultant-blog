@@ -1,0 +1,14 @@
+{{ $slug := .Get 0 }}
+{{ $conceptPage := .Site.GetPage (printf "/frameworks/%s" $slug) }}
+
+{{ if $conceptPage }}
+<div class="concept-popup-wrapper"> 
+  <span class="concept-trigger">{{ $conceptPage.Title }}</span>
+
+  <div class="concept-popup">
+    <button class="popup-close">×</button>
+    <strong><a href="{{ $conceptPage.Permalink }}">{{ $conceptPage.Title }}</a></strong>
+    <p>{{ $conceptPage.Description }}</p>
+    <a href="{{ $conceptPage.Permalink }}" class="popup-cta">View Full Framework →</a>
+  </div>
+</div> {{ end }}
