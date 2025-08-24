@@ -1,13 +1,5 @@
-<link rel="stylesheet" href="/css/custom.css">
-{{- /* layouts/partials/custom-head.html */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-{{- /* Link to our custom stylesheet */ -}}
-<link rel="stylesheet" href="css/custom.css" | relURL >
-
-{{- /*
-    This file is intentionally left blank by the theme to allow you to add your own
-    custom scripts, meta tags, or stylesheets to the <head> of every page.
-
-    By creating this file in your root `layouts/partials/` directory, you are telling
-    Hugo to use this one instead of the empty one from the theme.
-*/}}
+<link rel="stylesheet" href="{{ "css/custom.css" | absURL }}">

@@ -1,0 +1,26 @@
+{{ define "main" }}
+    <div class="list-header">
+        <h1>{{ .Title }}</h1>
+        <p class="section-description">{{ .Content }}</p>
+    </div>
+
+    <section class="post-list">
+        {{ range .Paginator.Pages }}
+            <article class="post-entry">
+                <a href="{{ .Permalink }}" class="post-link-wrapper">
+                    <header class="post-header">
+                        <h2 class="post-title">{{ .Title }}</h2>
+                    </header>
+                    <div class="post-summary">
+                        <p>{{ .Description }}</p>
+                    </div>
+                </a>
+                <footer class="post-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+                </footer>
+            </article>
+        {{ end }}
+    </section>
+
+    {{ partial "pagination.html" . }}
+{{ end }}

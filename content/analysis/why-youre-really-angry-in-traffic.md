@@ -2,7 +2,15 @@
 title: "Why You're Really Angry in Traffic (It's Not the Other Drivers)"
 date: 2025-08-23T20:30:00Z
 draft: false
-tags: ["Narrative Debt", "Systems Thinking", "Psychology"]
+description: "You're not losing your mind. The mismatch between a small trigger and a massive reaction isn't random. It's a pattern."
+featured: true
+framework: "narrative-debt" #this links to the framework
+related: 
+- "cost-of-outdated-story"
+tags: 
+- "Narrative Debt"
+- "Systems Thinking"
+- "Psychology"
 ---
 
 Have you ever found yourself screaming in your car at a stranger over something tiny? A slow merge, a late signal, a car that cuts you off. Where does that intense, disproportionate anger come from? It feels primal, immediate, and justified in the moment. But what if it's not about the traffic at all?
@@ -11,7 +19,7 @@ The anger is real, but the target is a proxy. That car didn't just cut you off i
 
 ### The Bankruptcy of Belief
 
-In our daily lives, we accumulate something called **Narrative Debt**. It's the compounding frustration that comes from dealing with broken systems. When you're told the economy is strong but your grocery bill doubles, you accumulate debt. When you follow the rules but see others get ahead by breaking them, you accumulate debt. When you vote for change and nothing changes, you accumulate debt.
+In our daily lives, we accumulate something called{{< concept "narrative-debt" >}} It's the compounding frustration that comes from dealing with broken systems. When you're told the economy is strong but your grocery bill doubles, you accumulate debt. When you follow the rules but see others get ahead by breaking them, you accumulate debt. When you vote for change and nothing changes, you accumulate debt.
 
 Eventually, this leads to a bankruptcy of belief. A deep-seated feeling that the systems we rely on are unfair, untrustworthy, or rigged. This leaves us with a reserve of free-floating anger and a sense of powerlessness.
 

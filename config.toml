@@ -1,87 +1,56 @@
-baseURL = '/'
-languageCode = 'en-us'
-title = 'Reality Consultant'
+# config.toml
+
+# --- Basic Configuration ---
+# Replace with your actual domain when you deploy
+baseURL = "https://www.realityconsultant.com/"
+languageCode = "en-us"
+title = "Reality Consultant"
 theme = "hugo-blog-awesome"
 enableEmoji = true
 
-# Main menu
-[[menu.main]]
-  name = 'Posts'
-  pageRef = 'posts'
-  weight = 10
-
-[[menu.main]]
-  name = 'About'
-  pageRef = 'about'
-  weight = 20
-
-# hugo.toml or config.toml
-
+# --- Main Navigation Menu (as per the blueprint) ---
 [menu]
   [[menu.main]]
-    name = "Posts"
-    url = "/posts/"
-    weight = 1
+    name = "Frameworks"
+    url = "/frameworks/"
+    weight = 10
+  [[menu.main]]
+    name = "Analysis"
+    url = "/analysis/"
+    weight = 20
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 2
+    weight = 30
 
-[params.social]
-  github = "yourusername"
-  twitter = "yourusername"
-  linkedin = "yourusername"
-
-[markup]
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.highlight]
-    noClasses = false
-
-# Site parameters
+# --- Site Parameters ---
 [params]
-  description = "Stepping into the future of systems thinking. Questioning the question to peel back from any silo trap."
-  mainSections = ['posts']
-  defaultColor = "dark" # dark, light, or auto
+  # Description for SEO and meta tags
+  description = "A brutally honest and intellectually rigorous guide to the hidden systems that shape our lives. No Blame, Just Mapping."
+  
+  # Tells Hugo that the 'Analysis' section is the main blog feed for the homepage
+  mainSections = ['analysis']
+  
+  # This theme setting is likely overridden by our custom CSS but is kept for completeness
+  defaultColor = "dark"
+
   [params.author]
     name = "The Reality Consultant"
-    avatar = "avatar.jpg" # Make sure you have an avatar.jpg in your /assets/ folder
-    description = "Your guide to understanding and navigating complex realities."
+    # Ensure you have an avatar file at 'static/images/avatar.jpg'
+    avatar = "images/avatar.jpg"
+    description = "We are diagnosticians providing clarity."
 
-baseURL = '/'
-languageCode = 'en-us'
-title = 'Reality Consultant'
-theme = "hugo-blog-awesome"
-enableEmoji = true
+  # Add your social media handles here if you want to display them
+  # [params.social]
+  #   Youtube = ""
+  #   Email = "GeovanniGalan3@gmail.com"
+  #   reddit = "TBD"
 
-# Main menu
-[[menu.main]]
-  name = 'Posts'
-  pageRef = 'posts'
-  weight = 10
-
-[[menu.main]]
-  name = 'About'
-  pageRef = 'about'
-  weight = 20
-
-[params.social]
-  github = "yourusername"
-  twitter = "yourusername"
-  linkedin = "yourusername"
-
+# --- Markdown Rendering Configuration ---
 [markup]
   [markup.goldmark.renderer]
+    # Set to true to allow raw HTML in your markdown content
     unsafe = true
   [markup.highlight]
+    # This is required for Hugo's syntax highlighting to work
     noClasses = false
-
-# Site parameters
-[params]
-  description = "Stepping into the future of systems thinking. Questioning the question to peel back from any silo trap."
-  mainSections = ['posts']
-  defaultColor = "dark" # dark, light, or auto
-  [params.author]
-    name = "The Reality Consultant"
-    avatar = "avatar.jpg" # Make sure you have an avatar.jpg in your /assets/ folder
-    description = "Your guide to understanding and navigating complex realities."

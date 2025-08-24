@@ -1,0 +1,28 @@
+{{ define "main" }}
+    <div class="portal-header">
+        <h1>The Diagnostic Interface</h1>
+        <p>A brutally honest and intellectually rigorous guide to the hidden systems that shape our lives. Choose your entry point.</p>
+    </div>
+
+    <div class="portal-container">
+        <a href="{{ (.Site.GetPage "section" "analysis").Permalink }}" class="portal-box">
+            <div class="portal-content">
+                <h2>Analysis</h2>
+                <p class="portal-description">
+                    Applying core frameworks to current events, personal observations, and new ideas through relatable, real-world examples.
+                </p>
+                <span class="portal-cta">Read the Latest →</span>
+            </div>
+        </a>
+
+        <a href="{{ (.Site.GetPage "section" "frameworks").Permalink }}" class="portal-box">
+            <div class="portal-content">
+                <h2>Frameworks</h2>
+                <p class="portal-description">
+                    The timeless reference library of our core concepts. These are the abstract models for understanding the patterns.
+                </p>
+                <span class="portal-cta">Explore the Library →</span>
+            </div>
+        </a>
+    </div>
+{{ end }}
