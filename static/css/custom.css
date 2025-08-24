@@ -389,3 +389,79 @@ a:hover {
   color: #888;
   cursor: pointer;
 }
+
+/* 16. About Page & Contact Form */
+
+.form-separator {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 4rem 0;
+}
+
+.contact-form-section h2 {
+  text-align: center;
+}
+.contact-form-section p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-form-section form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form-section .hidden {
+  display: none;
+}
+
+.contact-form-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.contact-form-section input[type="text"],
+.contact-form-section input[type="email"],
+.contact-form-section textarea {
+  width: 100%;
+  background-color: #2a2a2a;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 0.8rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border-radius: 5px; /* Slightly rounded for interactive elements */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.contact-form-section textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form-section input[type="text"]:focus,
+.contact-form-section input[type="email"]:focus,
+.contact-form-section textarea:focus {
+  outline: none;
+  border-color: var(--color-accent); /* Orange border on focus */
+}
+
+.contact-form-section button[type="submit"] {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+  width: 100%;
+}
+
+.contact-form-section button[type="submit"]:hover {
+  opacity: 0.9;
+}
